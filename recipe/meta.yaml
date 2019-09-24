@@ -1,0 +1,31 @@
+{% set name = "jansson" %}
+{% set version = "2.12" %}
+{% set sha256 = "5f8dec765048efac5d919aded51b26a32a05397ea207aa769ff6b53c7027d2c9" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: http://www.digip.org/{{ name }}/releases/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - make
+    - cmake
+    - {{ compiler('c') }}
+  host:
+
+test:
+  commands:
+    - test -f ${PREFIX}/lib/libjansson.a  # [unix]
+
+about:
+  home: https://github.com/akheron/jansson
+  license: MIT
+  license_file: LICENSE
+  summary: Jansson is a C library for encoding, decoding and manipulating JSON data
