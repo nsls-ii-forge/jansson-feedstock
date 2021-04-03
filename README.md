@@ -7,7 +7,7 @@ Package license: MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/nsls-ii-forge/jansson-feedstock/blob/master/LICENSE.txt)
 
-Summary: Jansson is a C library for encoding, decoding and manipulating JSON data
+Summary: Jansson is a C library for encoding, decoding and manipulating JSON data.
 
 Current build status
 ====================
